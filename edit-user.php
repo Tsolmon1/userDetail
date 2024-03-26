@@ -68,7 +68,7 @@ echo "<script>window.location.href='edit-user.php'</script>";
 <?php 
 $sid=intval($_GET['id']);
 $query=mysqli_query($con,"SELECT * FROM registration 
-join tbl_package on tbl_package.cid=registration.package");
+join tbl_package on tbl_package.cid=registration.package where registration.id='$sid'");
 while ($res=mysqli_fetch_array($query)) {
 
 ?>
